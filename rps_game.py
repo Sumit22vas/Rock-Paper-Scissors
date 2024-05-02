@@ -8,33 +8,33 @@ class RPS(Enum):
     PAPER = 2
     SCISSORS = 3
 
+welcome_message = """
+    *******************************
+    *                             *
+    *           WELCOME           *
+    *             TO              * 
+    *    ROCK, PAPER, SCISSORS    *
+    *                             *
+    *******************************
+    
+    """
+print(welcome_message)
 
-play_game_again = True
+def play_rps_game():
 
-while play_game_again:
 
-    welcome_message = """
-        *******************************
-        *                             *
-        *           WELCOME           *
-        *             TO              * 
-        *    ROCK, PAPER, SCISSORS    * 
-        *                             *
-        *******************************
-        
-        """
-    print(welcome_message)
 
     # Collect Player Input
     player_choice = input(
         "\nEnter... \n 1 for ROCK \n 2 for PAPER \n 3 for SCISSORS\n\n")
 
+    # Make Sure input is 1,2 or 3
+    if player_choice not in ["1","2","3"]:
+        print("Wrong Option Selected 👎")
+        return play_rps_game() # recurssive call
+        
     # casting Player input in integer
     player = int(player_choice)
-
-    # Make sure player provides a number which is not lesser than 1 or greater than 3
-    if player < 1 or player > 3:
-        sys.exit("Please enter 1, 2 or 3\n")
 
     # generate a random computer number for computer
     computer_choice = random.choice("123")
@@ -57,14 +57,22 @@ while play_game_again:
     else:
         print("💻 Computer wins!")
 
-    play_again = str(input("\n\n Do you want to play again ? Enter...\n Y to play again\n Q to quit the game\n"))
+    
+    # ask player if they want to play again or quit
+    while True:
+        play_again = str(input("\n\n Do you want to play again ? Enter...\n Y to play again\n Q to quit the game\n"))
+        if play_again.lower() not in ['y','q']:
+            continue
+        else:
+            break
 
     if play_again.lower() == 'y':
-        play_game_again = True
-        continue
+        play_rps_game() 
     else:
-        play_game_again = False
+        print("\n Thanks for playing... .🙏")
+        print("Bye Bye! 👋👋👋")
+        
     
-else: # termination of while loop
-    print("\n Bye Bye! 👋👋🙋👋")
+play_rps_game()
+    
     
