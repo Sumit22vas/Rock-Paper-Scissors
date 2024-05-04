@@ -8,18 +8,12 @@ class RPS(Enum):
     PAPER = 2
     SCISSORS = 3
 
-welcome_message = """
-    *******************************
-    *                             *
-    *           WELCOME           *
-    *             TO              * 
-    *    ROCK, PAPER, SCISSORS    *
-    *                             *
-    *******************************
-    
-    """
-
-print(welcome_message)
+# Welcome message
+print("*"*32)
+print(f"{'*'.ljust(8)}{'welcome'.upper().center(16)}{'*'.rjust(8)}")
+print(f"{'*'.ljust(8)}{'to'.upper().center(16)}{'*'.rjust(8)}")
+print(f"{'*'.ljust(4)}{'rock, paper, scissors'.upper().center(24)}{'*'.rjust(4)}")
+print("*"*32)
 
 def rock_paper_scissors():
 
