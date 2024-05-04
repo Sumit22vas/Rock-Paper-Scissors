@@ -1,5 +1,4 @@
 import random
-import sys
 from enum import Enum
 
 
@@ -8,12 +7,13 @@ class RPS(Enum):
     PAPER = 2
     SCISSORS = 3
 
-# Welcome message
-print("*"*32)
-print(f"{'*'.ljust(8)}{'welcome'.upper().center(16)}{'*'.rjust(8)}")
-print(f"{'*'.ljust(8)}{'to'.upper().center(16)}{'*'.rjust(8)}")
-print(f"{'*'.ljust(4)}{'rock, paper, scissors'.upper().center(24)}{'*'.rjust(4)}")
-print("*"*32)
+def print_welcome_msg():
+    # Welcome message
+    print("*"*32)
+    print(f"{'*'.ljust(8)}{'welcome'.upper().center(16)}{'*'.rjust(8)}")
+    print(f"{'*'.ljust(8)}{'to'.upper().center(16)}{'*'.rjust(8)}")
+    print(f"{'*'.ljust(4)}{'rock, paper, scissors'.upper().center(24)}{'*'.rjust(4)}")
+    print("*"*32)
 
 def rock_paper_scissors():
 
@@ -94,7 +94,7 @@ def rock_paper_scissors():
         
     
 play_game = rock_paper_scissors()
-play_game()
+
 
     
     
