@@ -50,8 +50,8 @@ def rock_paper_scissors():
         # cast computer_choice to integer
         computer = int(computer_choice)
 
-        print("\nYou Chose " + str(RPS(player)).replace("RPS.", "") + ".")
-        print("Computer Chose " + str(RPS(computer)).replace("RPS.", "") + ".\n")
+        print(f"You Chose {str(RPS(player)).replace('RPS.', '')}.")
+        print(f"Computer Chose {str(RPS(computer)).replace('RPS.', '')}.\n")
 
         def game_logic():
             nonlocal player_wins
@@ -77,10 +77,10 @@ def rock_paper_scissors():
         game_result = game_logic()
         print(game_result)
         game_count += 1
-        print("\nGame count = " + str(game_count))
-        print("Player Wins : " + str(player_wins))
-        print("Computer Wins : " + str(computer_wins))
-        print("Tie count : " + str(tie_count))
+        print(f"\nGame count = {str(game_count)}")
+        print(f"Player Wins : {str(player_wins)}")
+        print(f"Computer Wins : {str(computer_wins)}")
+        print(f"Tie count : {str(tie_count)}")
 
         # ask player if they want to play again or quit
         while True:
