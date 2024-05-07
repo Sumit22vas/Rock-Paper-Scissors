@@ -66,15 +66,15 @@ def rock_paper_scissors():
                 return "It's a tie. 😃"
             else:
                 computer_wins += 1
-                return "💻\ Computer wins!"
+                return "💻 Computer wins!"
 
         game_result = game_logic()
         print(game_result)
         game_count += 1
-        print(f"\nGame count = {str(game_count)}")
-        print(f"{player_name} Wins : {str(player_wins)}")
-        print(f"Computer Wins : {str(computer_wins)}")
-        print(f"Tie count : {str(tie_count)}")
+        print(f"\nGame count = {game_count}")
+        print(f"{player_name} Wins : {player_wins}")
+        print(f"Computer Wins : {computer_wins}")
+        print(f"Tie count : {tie_count}")
 
         # ask player if they want to play again or quit
         while True:
